@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #2c3e50;
+}
+
+/* Meu nav recebe uma posição relativa para ser possivel posicionar ele no body. */
+
+nav {
+    position: relative;
+    margin: 80px auto;
+    width: 590px;
+    height: 50px;
+    background-image: linear-gradient(to right,#73a0cc44, #34495e);
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0  rgba(0, 0, 0, 1.);
+
+}
+
+/* Meus link (Elementos do menu)  recebe o inline-block, para preencher ele mesmo e ser possivel alinha-lo de acordo com a preferência. */
+
+nav a{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgb(180, 180, 180);
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+
+    display: inline-block;
+    text-align: center;
+}
+
+/* Sinalização de controle do menu, recebe posição absoluta para ter o efeito de rolagem. */
+
+.animation{
+    position: absolute;
+    height: 5px;
+    width: 100px;
+    bottom: 0;
+    background: #1abc9c;
+    border-radius: 8px;
+
+    transition: all .3s ease 0s;
+}
+
+/* Configurações de cada elemeto por conta própria. */
+
+a:nth-child(1){
+    width: 100px;
+}
+
+/*Configurações do meu sinalizador*/
+
+
+/* Entenda que o código é feito com calculos. */
+
+nav .start-home, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+
+}
+
+
+a:nth-child(2){
+    width: 110px;
+    
+}
+
+nav .start-contat, a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+
+}
+
+
+a:nth-child(3){
+    width: 100px;
+    
+}
+
+nav .start-sobre, a:nth-child(3):hover~.animation {
+    width: 100px;
+    left: 210px;
+
+}
+
+
+a:nth-child(4){
+    width: 140px;
+    
+}
+
+nav .start-blog, a:nth-child(4):hover~.animation {
+    width: 140px;
+    left: 310px;
+
+}
+
+
+a:nth-child(5){
+    width: 120px;
+    
+}
+
+nav .start-entrar, a:nth-child(5):hover~.animation {
+    width: 130px;
+    left: 460px;
+
+}
+
+
